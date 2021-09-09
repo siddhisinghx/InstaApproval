@@ -4,8 +4,6 @@
 
 # Team
 
-![myimage-alt-tag](https://user-images.githubusercontent.com/30744855/132662453-afd1177e-c33a-40e1-a77a-a7f968552a2e.png)
-
 # Motivation
 The inspiration behind this project comes from the experience that if not all most of us had when we are applying for a loan from the bank. Loan application has been a tedious process for decades and approval takes a lot of time. Now imagine if you’re in a senario wherein you need to pay medical bills but your wallet is running low on cash. Would you prefer going to bank and wait for a week or would you look for options wherein you can get money much sooner? Well, this is where Insta Approval Comes in.
 For years, many of us have been going to third party lenders like friends, family members or goldsmith to name a few for urgent cash that we need. Some of us have been exploited with the interest charges. To save you from exploitation we have come up with a system which issues you the loan at lowest possible interest rates possible. You get the money, do your work and we’ll contact you for repayment later.
