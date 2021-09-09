@@ -9,6 +9,9 @@ For years, many of us have been going to third party lenders like friends, famil
 # Features
 1. Register and Login for all Users
 2. Once the user logs in he is directed to start application page where he can start the loan application and on successful completion the record is fetched by the verifying officer.
-3. The role of the verifying officer is to check if all the information provided is correct and only after everything is verified the application moves forward to sales officer.
-4. Speaking of sales offices we basically have 3 Bank Authority Personnels. One is sales officer, other is Supervisor and last but not the least we have Manager.
-5. Their roles differ in the sense if the loan amount is less than 1.5 lakhs, sales officer will approve. If greater than 1.5 lakhs and less than 5 lakhs supervisor will improve and if greater than 5 lakhs, manager will approve.
+3. One the user submits the application, an email is sent to user which indicates application is received.
+4. The role of the verifying officer is to check if all the information provided is correct and only after everything is verified the application moves forward to sales officer.
+5. Speaking of sales offices we basically have 3 Bank Authority Personnels. One is sales officer, other is Supervisor and last but not the least we have Manager.
+6. Their roles differ in the sense if the loan amount is less than 1.5 lakhs, sales officer will approve. If greater than 1.5 lakhs and less than 5 lakhs supervisor will improve and if greater than 5 lakhs, manager will approve.
+7. Once the loan is approved, another email is sent to user to notify him/her about the same.
+8. User can also check his/her application status in his login. He/She can also calculate the monthly emi and proceed for repayment options.
