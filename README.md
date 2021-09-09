@@ -1,8 +1,10 @@
 # InstaApproval
 
-![myimage-alt-tag](https://user-images.githubusercontent.com/30744855/132662432-3a1c7493-3a45-4a72-a4c6-3760ec2cfcb3.png)
+![myimage-alt-tag](https://user-images.githubusercontent.com/30744855/132664757-9215f339-2738-4b4b-a87c-629aa8890d4f.png)
 
 # Team
+
+![myimage-alt-tag](https://user-images.githubusercontent.com/30744855/132664797-45e29bd5-73bd-47f1-b2b2-e4fd1a7ea06d.png)
 
 # Motivation
 The inspiration behind this project comes from the experience that if not all most of us had when we are applying for a loan from the bank. Loan application has been a tedious process for decades and approval takes a lot of time. Now imagine if you’re in a senario wherein you need to pay medical bills but your wallet is running low on cash. Would you prefer going to bank and wait for a week or would you look for options wherein you can get money much sooner? Well, this is where Insta Approval Comes in.
