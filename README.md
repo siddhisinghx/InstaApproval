@@ -1,5 +1,7 @@
 # InstaApproval
 
+![myimage-alt-tag](https://user-images.githubusercontent.com/30744855/132662432-3a1c7493-3a45-4a72-a4c6-3760ec2cfcb3.png)
+
 # Problem Statement
 
 # Motivation
