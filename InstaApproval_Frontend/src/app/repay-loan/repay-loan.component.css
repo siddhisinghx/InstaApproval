@@ -1,0 +1,35 @@
+.service {
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #c014e3;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    border-radius: 45px 45px 45px 45px;
+    border-radius: 36px;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.bannerTitle h2 {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.table td,
+.table th {
+    padding: .90rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}

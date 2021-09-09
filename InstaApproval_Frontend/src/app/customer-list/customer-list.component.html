@@ -1,0 +1,78 @@
+
+<div class="container-fluid">
+    <span>
+        <br/>
+        <h2>Verifying Officer</h2>
+    <button mat-button class="menu-button" style="background-color: rgb(85,43,120); color:aliceblue"  (click)="logout()"  >
+    <mat-icon class="white-icon">exit_to_app</mat-icon>
+    <a href><span>LogOut</span></a>
+</button>
+
+    </span>
+    <br/>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th> Application Number </th>
+            <th> Name</th>
+            <th> Adhaar </th>
+            <th> Income </th>
+            <th>Verification Status</th>
+            <th>Income Proof Documents</th>
+            <th>Identity Proof Documents</th>
+            <th>Address Proof Documents</th>
+            <th> Actions </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of customers">
+            <td> {{ customer.applicationNumber }} </td>
+            <td> {{ customer.username }} </td>
+            <td> {{ customer.adhaar }} </td>
+            <td> {{customer.income}} </td>
+            <td> {{customer.documentsVerified}} </td>
+            <td>
+                <p *ngFor="let doc of customer.incomeProofDocs">
+                    {{doc}} <button mat-icon-button color="primary" (click)="displayDocument(doc)" title="View Document"><mat-icon>launch</mat-icon></button>
+                </p>
+            </td>
+            <td>
+                <p *ngFor="let doc of customer.identityProofDocs">
+                    {{doc}} <button mat-icon-button color="primary" (click)="displayDocument(doc)" title="View Document"><mat-icon>launch</mat-icon></button>
+                </p>
+            </td>
+            <td>
+                <p *ngFor="let doc of customer.addressProofDocs">
+                    {{doc}} <button mat-icon-button color="primary" (click)="displayDocument(doc)" title="View Document"><mat-icon>launch</mat-icon></button>
+                </p>
+            </td>
+            <td>
+                <p>
+                    <button mat-icon-button title="Approve Documents" (click)="approveDocuments(customer.id)"><mat-icon class="material-icons color_green">check_box</mat-icon></button>
+                    <button mat-icon-button title="Reject Documents" (click)="rejectDocuments(customer.id)"><mat-icon class="material-icons color_red">delete</mat-icon></button>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+<!--  Modal to display documents -->
+<div class="modal" tabindex="-1" role="dialog" id="docDisplayModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">View Document</h2>
+            </div>
+            <div class="modal-body">
+                <h2>{{displayFileData.fileName}}</h2>
+                <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(displayFileData.url)" style="border-style: none;width: 100%; height: 400px" frameborder="0"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeDocumentModal()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

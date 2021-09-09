@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Arvo:700|Open+Sans");
+h1,
+h2,
+h3,
+h4 {
+    font-size: 38px;
+    color: #222222;
+    font-weight: 700;
+    font-family: "RNHouseSansRegular", sans-serif;
+}
+
+* {
+    margin-top: 2px;
+}
+
+a {
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a a:focus {
+    outline: none;
+}
+
+p {
+    font-weight: 400;
+    font-family: 'RNHouseSansRegular', sans-serif;
+    margin: 0px;
+    font-size: 16px;
+}
+
+ul,
+ol {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+a:not([href]):not([tabindex]) {
+    color: #fff;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 30px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    display: inline-block;
+}
+
+.btn-common {
+    background-color: #9138f6;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.btn-border {
+    color: #a738f6;
+    background-color: transparent;
+    border: 1px solid #9738f6;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.btn-border:hover {
+    color: rgb(0, 0, 0);
+    border-color: #f6b038;
+    background-color: #f5dc88;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+
+/* ==========================================================================
+3. Hero Area
+========================================================================== */
+
+#hero-area {
+    background-image: url(/assets/img/hero-area.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: auto;
+    /*margin-top: -10px;*/
+    position: relative;
+    overflow: hidden;
+    padding: 180px 0 80px;
+}
+
+#hero-area .contents .head-title {
+    color: #222222;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 10px;
+}
+
+#hero-area .contents .header-button {
+    margin-top: 20px;
+    color: #222222;
+}
+
+#hero-area .contents .header-button .btn {
+    margin-right: 10px;
+}

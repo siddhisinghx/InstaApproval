@@ -1,0 +1,66 @@
+<div class="container" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-lg-6">
+            <div>
+                <h2 class="mb-3">LOAN AMOUNT</h2>
+                <div class="loanAmt">
+                    <mat-slider thumbLabel [(ngModel)]="loanAmount" (ngModelChange)="calculateInterest()" class="mat-loanAmt" [displayWith]="formatLoanAmt" tickInterval="1000" step="1000" min="0" max="1000000" aria-label="units"></mat-slider>
+                    <br/>
+                </div>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Enter Amount in INR</mat-label>
+                    <input matInput placeholder="Interest Rate in %" [(ngModel)]="loanAmount" (ngModelChange)="calculateInterest()">
+                </mat-form-field>
+                <br/>
+
+                <h2 class="mb-3" style="padding-top: 20px;">ANNUAL INTEREST RATE (in %)</h2>
+                <div class="annualInterestRate">
+                    <mat-slider [(ngModel)]="annualIntRate" (ngModelChange)="calculateInterest()" thumbLabel class="mat-annualInterestRate" [displayWith]="formatAnnualInterestRate" tickInterval="4" step="0.25" min="0" max="20" aria-label="units"></mat-slider>
+                    <br/>
+                </div>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Enter Rate in %</mat-label>
+                    <input matInput placeholder="Interest Rate in %" [(ngModel)]="annualIntRate" (ngModelChange)="calculateInterest()">
+                </mat-form-field>
+                <br/>
+
+
+
+                <h2 class="mb-3" style="padding-top: 20px;">TENURE</h2>
+                <div class="tenure">
+                    <mat-slider [(ngModel)]="tenure" (ngModelChange)="calculateInterest()" class="mat-tenure" thumbLabel [displayWith]="formatAnnualInterestRate" tickInterval="1" step="1" min="0" max="10" aria-label="units"></mat-slider>
+                </div>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Time in years</mat-label>
+                    <input matInput placeholder="Interest Rate in %" [(ngModel)]="tenure" (ngModelChange)="calculateInterest()">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div>
+                <h1 style="font-size: 50px">Easy EMI Calculator</h1>
+                <br/> Calculate your personal loan EMI with the help of our Easy Loan EMI Calculator. All you need to do is enter your preferred loan amount, tenure, interest rate and hit "Calculate" to check your monthly instalments.
+
+                <br/>
+
+
+            </div>
+            <div class="chart-wrapper">
+                <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+        </canvas>
+            </div>
+            <div class="text-center">
+                Total Principal Amount: Rs.{{loanAmount}}
+                <br/> Total Interest: Rs.{{interest}}
+
+            </div>
+            <br/>
+            <a href="http://localhost:4200/repay-loan" style="text-decoration: none;"><button mat-raised-button color="primary" style="padding-left: 30px; padding-right: 30px; padding-top: 5px; padding-bottom: 5px; margin:0 auto;display:block; margin-top: 20px">Pay your monthly EMI</button></a>
+
+            <h1 class="text-center" style="margin:50px;display:block;">YOUR MONTHLY EMI IS: Rs.{{emi}}</h1>
+        </div>
+
+    </div>
+
+
+</div>

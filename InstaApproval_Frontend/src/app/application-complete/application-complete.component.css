@@ -1,0 +1,14 @@
+.typewriter-header{
+    font-size: 45px;
+    text-align: center;
+    color: #9d4edd;
+    font-family: 'Courgette', cursive;
+}
+
+.gif{
+    margin: 30px auto;
+    max-width: fit-content;
+}
+.gif img{
+    height: 500px;
+}

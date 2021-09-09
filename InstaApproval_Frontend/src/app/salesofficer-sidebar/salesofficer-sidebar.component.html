@@ -1,0 +1,52 @@
+<br/>
+<mat-toolbar style="margin-top: -20px">
+    <button mat-icon-button (click)="sidenav.toggle()" class="toggleButton">
+    <mat-icon *ngIf="!sidenav.opened">
+      <p style="color: rgb(0, 0, 0)">menu</p>
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+      <p style="color: rgb(0, 0, 0)">close</p>
+    </mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-sidenav-container style="margin-top: -65px; padding-top: 60px;">
+    <mat-sidenav class="mat-elevation-z8" mode="side" #sidenav="matSidenav">
+        <img class="avatar mat-elevation-z8" style="width: 150px; height: 150px" src="assets/img/divya.jpg" />
+
+        <h2 class="name">Divya Gahlot</h2>
+        <p class="designation h3">Sales Officer Level 1</p>
+
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="/salesofficer-portal/sales-main" routerLinkActive="active" style="background-color:#7343ab; color: aliceblue">
+      <mat-icon class="white-icon">home</mat-icon>
+      <span>Home</span>
+    </button>
+        <button mat-button class="menu-button" routerLink="/salesofficer-portal/sales-supervisorstatus" routerLinkActive="active" style="background-color: #7343ab; color: aliceblue">
+      <mat-icon class="white-icon">home</mat-icon>
+      <span>Supervisor Status</span>
+    </button>
+        <button mat-button class="menu-button" routerLink="/salesofficer-portal/sales-approved" style="background-color: #7343ab; color: aliceblue">
+      <mat-icon class="white-icon">check_circle</mat-icon>
+      <span>Approved</span>
+    </button>
+        <button mat-button class="menu-button" routerLink="/salesofficer-portal/sales-pending" style="background-color:#7343ab; color: aliceblue">
+      <mat-icon class="white-icon">hourglass_full</mat-icon>
+      <span>Pending</span>
+    </button>
+        <button mat-button class="menu-button" routerLink="/salesofficer-portal/sales-rejected" style="background-color:#7343ab; color: aliceblue">
+      <mat-icon class="white-icon">cancel</mat-icon>
+      <span>Rejected</span>
+    </button>
+
+        <mat-divider></mat-divider>
+
+        <button mat-button class="menu-button" style="background-color: #7343ab; color:aliceblue" (click)="logout()">
+      <mat-icon class="white-icon">exit_to_app</mat-icon>
+      <a href><span>LogOut</span></a>
+    </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

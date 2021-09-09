@@ -1,0 +1,206 @@
+<div class="mat-elevation-z8">
+    <div class="content">
+        <div id="wrapper">
+            <div class="d-flex flex-column" id="content-wrapper">
+                <div id="content">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div class="
+                  d-sm-flex
+                  justify-content-between
+                  align-items-center
+                  mb-4
+                ">
+                                <h3 class="text-dark mb-0" style="font-size: 60px; padding-top: 15px">
+                                    Supervisor Portal
+                                </h3>
+                            </div>
+
+                            <h4 class="text-dark mb-0" style="font-size: 30px">
+                                Welcome, Manmayi!
+                            </h4>
+                            <br /><br />
+                            <h4 class="text-dark mb-0">
+                                Statistics for the Month of SEPTEMBER
+                            </h4>
+                            <br /><br />
+                            <div class="row">
+                                <div class="col-md-6 col-xl-3 mb-4">
+                                    <div class="card shadow" style="background-color: rgb(201,185,214)">
+                                        <div class="card-body">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2">
+                                                    <p class="m-0 h5">TOTAL LOAN</p>
+                                                    <p class="text-black-50 h6 m-0">
+                                                        Rs. {{ totalLoan }}
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-3 mb-4">
+                                    <div class="card shadow" style="background-color: rgb(165,140,195)">
+                                        <div class="card-body">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2">
+                                                    <p class="h5 m-0">APPROVED</p>
+                                                    <p class="text-dark-50 h6 m-0">
+                                                        {{ totalApproved }}
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-3 mb-4">
+                                    <div class="card shadow" style="background-color: rgb(241,204,131)">
+                                        <div class="card-body">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2">
+                                                    <p class="h5 m-0">PENDING</p>
+                                                    <p class="text-black-50 h6 m-0">{{ totalPending }}</p>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm">
+                                                        <div class="progress-bar bg-primary" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [ngStyle]="pendingPercentWidth">
+                                                            <span class="sr-only">{{ pendingPercent }}%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xl-3 mb-4">
+                                    <div class="card shadow" style="background-color: rgb(91,40,125)">
+                                        <div class="card-body">
+                                            <div class="row align-items-center no-gutters">
+                                                <div class="col mr-2">
+                                                    <p class="h5 m-0">REJECTED</p>
+                                                    <p class="text-black-50 h6 m-0">
+                                                        {{ totalRejected }}
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-xl-12">
+                                    <div class="card shadow mb-4">
+                                        <div class="
+                        card-header
+                        d-flex
+                        justify-content-between
+                        align-items-center
+                      ">
+                                            <h3 class="text-primary font-weight-bold h3 m-0">
+                                                All Requests
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="table-responsive-lg">
+                                                    <ag-grid-angular style="width: 100%; height: 500px" class="ag-theme-alpine" [rowData]="rowData" [columnDefs]="columnDefs" [frameworkComponents]="frameworkComponents" (gridReady)="onGridReady($event)">
+                                                    </ag-grid-angular>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="card shadow mb-4">
+                                                <div class="
+                            card-header
+                            d-flex
+                            justify-content-between
+                            align-items-center
+                          ">
+                                                    <h3 class="text-primary font-weight-bold m-0">
+                                                        View your Details
+                                                    </h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="col-lg-12 mb-4">
+                                                        <div class="row">
+                                                            <div class="col-lg-12 mb-4">
+                                                                <div class="card text-black shadow" style="background-color: rgb(201,185,214)">
+                                                                    <div class="card-body">
+                                                                        <p class="m-0 h5">SalesOfficer</p>
+                                                                        <p class="text-black-50 h6 m-0">
+                                                                            Ms. Divya Gahlot
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-12 mb-4">
+                                                                <div class="card text-black shadow" style="background-color: rgb(165,140,195)">
+                                                                    <div class="card-body">
+                                                                        <p class="m-0 h5">Manager</p>
+                                                                        <p class="text-black-50 h6 m-0">
+                                                                            Ms. Siddhi Singh
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <div class="card shadow mb-4">
+                                                <div class="
+                            card-header
+                            d-flex
+                            justify-content-between
+                            align-items-center
+                          ">
+                                                    <h3 class="text-primary font-weight-bold m-0">
+                                                        View Recent Activity
+                                                    </h3>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="col-lg-12 mb-4">
+                                                        <div class="row">
+                                                            <ul>
+                                                                <li *ngFor="let currActivityLog of activityLog">
+                                                                    {{ currActivityLog }}
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="bg-black sticky-footer">
+                            <div class="container my-auto">
+                                <div class="text-center text-white my-auto copyright">
+                                    <span>Capstone Team 5</span>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

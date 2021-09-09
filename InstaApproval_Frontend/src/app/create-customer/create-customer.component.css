@@ -1,0 +1,30 @@
+h3 {
+    text-align: center;
+    font-family: "RNHouseSansRegular", sans-serif;
+}
+
+input[type=text] {
+    background-color: transparent;
+    display: block;
+    color: #000000;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #131111 1px;
+    padding: 3px 10px;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn {
+    background-color: rgba(89, 25, 148, 0.742);
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: block;
+}

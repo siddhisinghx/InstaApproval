@@ -1,0 +1,35 @@
+.loanAmt .mat-loanAmt {
+  transform: scale(2);
+  width: 300px;
+  margin-top: 50px;
+  border-width: 10px;
+  left: 150px;
+}
+.annualInterestRate .mat-annualInterestRate {
+  transform: scale(2);
+  width: 300px;
+  margin-top: 50px;
+  border-width: 10px;
+  left: 150px;
+}
+.tenure .mat-tenure {
+  transform: scale(2);
+  width: 300px;
+  margin-top: 50px;
+  border-width: 10px;
+  left: 150px;
+}
+::ng-deep .mat-slider-thumb-label {
+  transform: rotate(45deg) !important;
+  border-radius: 50% 50% 0 !important;
+}
+
+::ng-deep  .mat-slider-thumb {
+  transform: scale(0) !important;
+}
+
+::ng-deep  .mat-slider-thumb-label-text {
+  opacity: 1 !important;
+}
+
+

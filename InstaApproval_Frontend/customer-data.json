@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "applicationNumber": 101,"username": "JohnDoe", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "LLERT5412W","status": "Approved by Manager","loanAmount": 404500, "cibilScore": 665, "income": 870000
+    },
+    {
+      "applicationNumber": 102,"username": "ManikaArora", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 110000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 103,"username": "Dhruvmalik", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 360000, "cibilScore": 430, "income": 605000},
+    {
+      "applicationNumber": 104,"username": "MuskanGhalot", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Manager","loanAmount": 404000, "cibilScore": 670, "income": 1100000},
+    {
+      "applicationNumber": 105,"username": "RiyaSingh", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by SalesOfficer","loanAmount": 112000, "cibilScore": 863, "income": 3200000},
+    {
+      "applicationNumber": 106,"username": "RiyaYadav", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 60000, "cibilScore": 379, "income": 702000},
+    {
+      "applicationNumber": 107,"username": "RonMalik", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 95000, "cibilScore": 711, "income": 650000},
+    {
+      "applicationNumber": 108,"username": "HarshBatra", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 60000, "cibilScore": 905, "income": 850000},
+    {
+      "applicationNumber": 109,"username": "JahnviMatra", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 190000, "cibilScore": 672, "income": 1150000},
+    {
+      "applicationNumber": 110,"username": "VenkatPrasad", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 230000, "cibilScore": 890, "income": 600000},
+    {
+      "applicationNumber": 111,"username": "VakulDev", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 900000, "cibilScore": 971, "income": 800000},
+    {
+      "applicationNumber": 112,"username": "RashiSingh", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 810000, "cibilScore": 760, "income": 1200000},
+    {
+      "applicationNumber": 113,"username": "KhyatiKohli", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 200000, "cibilScore": 452, "income": 500000},
+    {
+      "applicationNumber": 114,"username": "KshitijAhuja", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 61000, "cibilScore": 821, "income": 102000},
+    {
+      "applicationNumber": 115,"username": "VarnikaYadav", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 700000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 116,"username": "DevikaAnand", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 120000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 117,"username": "SaloniJain", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 165000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 118,"username": "VanishreePrasad", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 400000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 119,"username": "AkshitaChander", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 70000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 120,"username": "AnweshaRoy", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 102000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 121,"username": "KajalChaudhary", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 560000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 122,"username": "Amanprasad", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 602000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 123,"username": "AbhishekChaudhary", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 500000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 124,"username": "ShubhamChauhan", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 100000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 125,"username": "TanyaGhosh", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 160000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 126,"username": "AdityaMishra", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 70000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 127,"username": "UtkarshSharma", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 900000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 128,"username": "AnjaliRoongta", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 850000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 129,"username": "MahiKaushik", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 400000, "cibilScore": 511, "income": 102000},
+    {
+      "applicationNumber": 130,"username": "ElizaShaik", "password": "password","contact": 9988776655,"email": "johndoe@gmail.com","adhaar": 998789753122,
+      "pancard": "WUTBB8870P","status": "Approved by Supervisor","loanAmount": 320000, "cibilScore": 511, "income": 102000}
+  ]
+}
+

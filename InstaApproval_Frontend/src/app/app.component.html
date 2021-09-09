@@ -1,0 +1,55 @@
+<div id="app">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <ul class="navbar-nav mr-auto" routerLinkActive="active">
+            <!-- <li class="nav-item" *ngIf="showAdminBoard">
+             <a href="/super" class="nav-link" routerLink="super">Admin Board</a>
+           </li>
+           <li class="nav-item" *ngIf="showModeratorBoard">
+             <a href="/sales" class="nav-link" routerLink="sales">Moderator Board</a>
+           </li>
+           <li class="nav-item" *ngIf="showMangBoard">
+             <a href="/mang" class="nav-link" routerLink="mang">Manager Board</a>
+           </li>
+            <li class="nav-item">
+             <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+           </li> -->
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+            <li class="nav-item" style = "font-size: 20px; margin-left: 30px;">
+                <a href="/home" class="nav-link" >Insta Approval</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="/login" class="nav-link" routerLink="login">Login</a>
+            </li> -->
+        </ul>
+
+        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+            <li class="nav-item" style = "font-size: 20px; margin-left: 30px;">
+                <a href="/user" class="nav-link" >Insta Approval</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="/login" class="nav-link" routerLink="login">Login</a>
+            </li> -->
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="emi-calculator">EMI-Calculator</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+            <li class="nav-item" style = "font-size: 20px;">
+                <a href="/profile" class="nav-link" routerLink="profile">{{ name }}</a>
+            </li>
+            <li class="nav-item">
+                <a href class="nav-link" (click)="logout()">Log Out</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="body">
+    <router-outlet></router-outlet>
+</div>

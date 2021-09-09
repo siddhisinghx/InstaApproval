@@ -1,0 +1,345 @@
+<div class="container">
+<mat-horizontal-stepper labelPosition="bottom" [orientation]="(stepperOrientation | async)!">
+    <mat-step [stepControl]="personalDetailsFormGroup" errorMessage="Step Pending!">
+        <ng-template matStepLabel>
+            <mat-icon>account_box</mat-icon>
+            <p>Personal Details</p>
+        </ng-template>
+
+        <!-- Personal details form-->
+        <form [formGroup]="personalDetailsFormGroup">
+
+            <div class="form-group">
+                <br>
+                <label> Contact</label>
+                <input type="text" [class.is-invalid]="personalFormcontrols.contact.invalid && personalFormcontrols.contact.touched" class="form-control" id="contact" formControlName="contact" name="contact">
+                <div *ngIf="personalFormcontrols.contact.invalid && personalFormcontrols.contact.touched">
+                    <small class="text-danger" *ngIf="personalFormcontrols.contact.errors?.required">Contact is required! </small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.contact.errors?.minlength">Contact must be of 10 digits only! </small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.contact.errors?.maxlength">Contact must be of 10 digits only! </small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.contact.errors?.pattern">Contact must be valid! </small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <br>
+                <label> Adhaar</label>
+                <input type="text" [class.is-invalid]="personalFormcontrols.adhaar.invalid && personalFormcontrols.adhaar.touched" class="form-control" id="adhaar" formControlName="adhaar" name="adhaar">
+                <div *ngIf="personalFormcontrols.adhaar.invalid && personalFormcontrols.adhaar.touched">
+                    <small class="text-danger" *ngIf="personalFormcontrols.adhaar.errors?.required">Adhaar is required</small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.adhaar.errors?.minlength">Adhaar must be of 12 digits only!</small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.adhaar.errors?.maxlength">Adhaar must be of 12 digits only!</small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.adhaar.errors?.pattern">Adhaar must be valid!</small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <br>
+                <label> Pancard</label>
+                <input type="text" [class.is-invalid]="personalFormcontrols.pancard.invalid && personalFormcontrols.pancard.touched" class="form-control" id="pancard" formControlName="pancard" name="pancard">
+                <div *ngIf="personalFormcontrols.pancard.invalid && personalFormcontrols.pancard.touched">
+                    <small class="text-danger" *ngIf="personalFormcontrols.pancard.errors?.required">Pan Card is required! </small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.pancard.errors?.minlength">Pan Card must be of 10 characters only! </small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.pancard.errors?.maxlength">Pan Card must be of 10 characters only! </small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.pancard.errors?.pattern">Pan Card must be valid! </small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <br>
+                <label>Income (Per Annum)</label>
+                <input type="text" [class.is-invalid]="personalFormcontrols.income.invalid && personalFormcontrols.income.touched" class="form-control" id="income" formControlName="income" name="income">
+                <div *ngIf="personalFormcontrols.income.invalid && personalFormcontrols.income.touched">
+                    <small class="text-danger" *ngIf="personalFormcontrols.income.errors?.required">Income is required!</small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.income.errors?.pattern">Income must be valid! </small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <br>
+                <label> Loan Amount</label>
+                <input type="text" [class.is-invalid]="personalFormcontrols.loanAmount.invalid && personalFormcontrols.loanAmount.touched" class="form-control" id="loanAmount" formControlName="loanAmount" name="loanAmount">
+                <div *ngIf="personalFormcontrols.loanAmount.invalid && personalFormcontrols.loanAmount.touched">
+                    <small class="text-danger" *ngIf="personalFormcontrols.loanAmount.errors?.required">Loan Amount is required!</small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.loanAmount.errors?.min">Loan Amount must be minimum 5000 Rupees!</small>
+                    <small class="text-danger" *ngIf="personalFormcontrols.loanAmount.errors?.pattern">Loan Amount must be valid! </small>
+                </div>
+            </div>
+
+            <br><br>
+            <button matStepperNext class="next btn">Next</button>
+        </form>
+
+    </mat-step>
+    <mat-step [stepControl]="incomeProofFormGroup" errorMessage="Step Pending!">
+        <ng-template matStepLabel>
+            <mat-icon>monetization_on</mat-icon>
+            <p>Income Proof</p>
+        </ng-template>
+
+        <br><br>
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panel1OpenState = true"
+                                    (closed)="panel1OpenState = false">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon [inline]="true">info</mat-icon>Accepted Documents List
+                </mat-panel-title>
+                <mat-panel-description>
+                    Please check the list before you proceed!
+                </mat-panel-description>
+                </mat-expansion-panel-header>
+                <ul>
+                    <li>Latest Bank Statement / Passbook (where salary / income is credited for past 6 months)</li>
+                    <li>Latest 6 Months Salary Slip with all deductions and last 2 years Form 16</li>
+                    <li>Certified Financial Statement for the last two years <em>(If self-employed)</em></li>
+                </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <!-- Form to collect income proof documents -->
+        <form [formGroup]="incomeProofFormGroup">
+            <br><br><br>
+            <label>Upload documents for income proof</label>
+            <br><br>  
+            <input type="file" multiple class="form-control" formControlName="incomeFiles" (change)="incomeFileUpload($event)"><br>
+        </form>
+
+        <!-- Display uploaded files -->
+        <div *ngIf="incomeFiles.length>0" class="uploads-display">
+            <h2>
+                <mat-icon [inline]="true" class="material-icons color_blue">attach_file</mat-icon>Uploaded files</h2>
+            <table class="table table-hover">
+                <thead>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let file of incomeFiles">
+                        <td>{{file.name}}</td>
+                        <td>{{file.type}}</td>
+                        <td>{{file.size}}</td>
+                        <td class="material-icons color_red" (click)="deleteIncomeFile(file)">
+                            <mat-icon>delete</mat-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br><br>
+        <button matStepperPrevious class="prev btn">Previous</button>
+        <button matStepperNext class="next btn">Next</button>
+    </mat-step>
+    <mat-step [stepControl]="identityProofFormGroup" errorMessage="Step Pending!">
+        <ng-template matStepLabel>
+            <mat-icon>security</mat-icon>
+            <p>Identity Proof</p>
+        </ng-template>
+
+        <br><br>
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panel2OpenState = true"
+                                    (closed)="panel2OpenState = false">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon [inline]="true">info</mat-icon>Accepted Documents List
+                </mat-panel-title>
+                <mat-panel-description>
+                    Please check the list before you proceed!
+                </mat-panel-description>
+                </mat-expansion-panel-header>
+                <ul>
+                    <li>Voters card</li>
+                    <li>Aadhaar card</li>
+                    <li>Drivers license</li>
+                </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <!-- Form to collect identity proof documents -->
+        <form [formGroup]="identityProofFormGroup">
+            <br><br><br>
+            <label>Upload documents for identity proof</label>
+            <br><br>
+            <input type="file" multiple class="form-control" formControlName="identityFiles" (change)="identityFileUpload($event)"><br>
+        </form>
+        <!-- Display uploaded files -->
+        <div *ngIf="identityFiles.length>0" class="uploads-display">
+            <h2>
+                <mat-icon [inline]="true" class="material-icons color_blue">attach_file</mat-icon>Uploaded files</h2>
+            <table class="table table-hover">
+                <thead>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let file of identityFiles">
+                        <td>{{file.name}}</td>
+                        <td>{{file.type}}</td>
+                        <td>{{file.size}}</td>
+                        <td class="material-icons color_red" (click)="deleteIdentityFile(file)">
+                            <mat-icon>delete</mat-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br><br>
+        <button matStepperPrevious class="prev btn">Previous</button>
+        <button matStepperNext class="next btn">Next</button>
+    </mat-step>
+    <mat-step [stepControl]="addressProofFormGroup" errorMessage="Step Pending!">
+        <ng-template matStepLabel>
+            <mat-icon>location_city</mat-icon>
+            <p>Address Proof</p>
+        </ng-template>
+
+        <br><br>
+        <mat-accordion>
+            <mat-expansion-panel (opened)="panel3OpenState = true"
+                                    (closed)="panel3OpenState = false">
+                <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-icon [inline]="true">info</mat-icon>Accepted Documents List
+                </mat-panel-title>
+                <mat-panel-description>
+                    Please check the list before you proceed!
+                </mat-panel-description>
+                </mat-expansion-panel-header>
+                <ul>
+                    <li>Ration card</li>
+                    <li>Telephone Bill / Electricity Bill</li>
+                    <li>Voters card</li>
+                </ul>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+        <!-- Form to collect address proof -->
+        <form [formGroup]="addressProofFormGroup">
+            <br><br><br>
+            <label>Upload documents for address proof</label>
+            <br><br>
+            <input type="file" multiple class="form-control" formControlName="addressFiles" (change)="addressFileUpload($event)"><br>
+        </form>
+        <!-- Display uploaded files -->
+        <div *ngIf="addressFiles.length>0" class="uploads-display">
+            <h2>
+                <mat-icon [inline]="true" class="material-icons color_blue">attach_file</mat-icon>Uploaded files</h2>
+            <table class="table table-hover">
+                <thead>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let file of addressFiles">
+                        <td>{{file.name}}</td>
+                        <td>{{file.type}}</td>
+                        <td>{{file.size}}</td>
+                        <td class="material-icons color_red" (click)="deleteAddressFile(file)">
+                            <mat-icon>delete</mat-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br><br>
+        <button matStepperPrevious class="prev btn">Previous</button>
+        <button matStepperNext class="next btn">Next</button>
+    </mat-step>
+    <mat-step label="Review and Submit">
+        <ng-template matStepLabel>
+            <mat-icon>rate_review</mat-icon>
+            <p>Review and Submit</p>
+        </ng-template>
+        <!-- Display complete input data for reviewing-->
+
+        <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <td>Contact</td>
+                    <td>{{personalDetailsFormGroup.get('contact')?.value}}</td>
+                </tr>
+                <tr>
+                    <td>Adhaar</td>
+                    <td>{{personalDetailsFormGroup.get('adhaar')?.value}}</td>
+                </tr>
+                <tr>
+                    <td>Pancard</td>
+                    <td>{{personalDetailsFormGroup.get('pancard')?.value}}</td>
+                </tr>
+                <tr>
+                    <td>Income (Per Annum)</td>
+                    <td>{{personalDetailsFormGroup.get('income')?.value}}</td>
+                </tr>
+                <tr>
+                    <td>Loan Amount</td>
+                    <td>{{personalDetailsFormGroup.get('loanAmount')?.value}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div *ngIf="incomeFiles.length>0 || identityFiles.length>0 || addressFiles.length>0" class="uploads-display">
+            <h2>
+                <mat-icon [inline]="true" class="material-icons color_blue">attach_file</mat-icon>Uploaded files</h2>
+            <table class="table table-hover">
+                <thead>
+                    <th>File Uploaded</th>
+                    <th>Preview</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let file of incomeFiles">
+                        <td>{{file.name}}</td>
+                        <td (click)="displayFile(file.name)">
+                            <mat-icon>pageview</mat-icon>
+                        </td>
+                    </tr>
+                    <tr *ngFor="let file of identityFiles">
+                        <td>{{file.name}}</td>
+                        <td (click)="displayFile(file.name)">
+                            <mat-icon>pageview</mat-icon>
+                        </td>
+                    </tr>
+                    <tr *ngFor="let file of addressFiles">
+                        <td>{{file.name}}</td>
+                        <td (click)="displayFile(file.name)">
+                            <mat-icon>pageview</mat-icon>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br><br>
+        <button matStepperPrevious class="prev btn">Previous</button>
+        <button class="next btn" [disabled]="personalDetailsFormGroup.invalid && incomeProofFormGroup.invalid &&
+        identityProofFormGroup.invalid && addressProofFormGroup.invalid" (click)="submitApplication()">Submit Application</button>
+    </mat-step>
+</mat-horizontal-stepper>
+</div>
+
+<!--  Modal to display documents -->
+<div class="modal" tabindex="-1" role="dialog" id="docDisplayModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">View Document</h2>
+        </div>
+        <div class="modal-body">
+            <h2>{{displayFileData.fileName}}</h2>
+            <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(displayFileData.url)" style="border-style: none;width: 100%; height: 400px" frameborder="0"></iframe>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="closeDocumentModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

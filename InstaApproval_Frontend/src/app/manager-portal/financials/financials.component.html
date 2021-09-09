@@ -1,0 +1,254 @@
+<div class="mat-elevation-z8">
+    <div class="content">
+        <div id="wrapper">
+            <div class="d-flex flex-column" id="content-wrapper">
+                <div id="content">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                                <h3 class="text-dark mb-0 align-items-center" style="font-size: 60px; padding-top: 15px">
+                                    STATISTICS
+                                </h3>
+                            </div>
+                            <br/>
+
+                            <div class="row">
+                                <div class="col-lg-8 col-xl-8">
+                                    <div class="card shadow mb-4">
+                                        <div class=" card-header d-flex justify-content-between align-items-center">
+                                            <h3 class="font-weight-bold h3 m-0" style="color: rebeccapurple">
+                                                All Requests
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="table-responsive-lg">
+
+                                                    <div style="display: block">
+                                                        <div class="chart-wrapper">
+                                                            <canvas [chartType]="barChartType"
+                                                                    [colors]="barChartColors"
+                                                                    [datasets]="barChartData"
+                                                                    [labels]="barChartLabels"
+                                                                    [legend]="barChartLegend"
+                                                                    [options]="barChartOptions"
+                                                                    [plugins]="barChartPlugins"
+                                                                    baseChart>
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-xl-4">
+                                        <div class="card shadow mb-4">
+                                            <div class=" card-header d-flex justify-content-between align-items-center">
+                                                <h3 class="font-weight-bold m-0" style="color: rebeccapurple">
+                                                    Quarterwise Total Loan Amounts Approved
+                                                </h3>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="col-lg-12 mb-4">
+                                                    <div class="row">
+
+                                                        <div class="col-lg-12 mb-4">
+                                                            <div class="card shadow"
+                                                                 style="background-color: rgb(201,185,214)">
+                                                                <div class="card-body">
+                                                                    <p class="m-0 h5">Quarter 1</p>
+                                                                    <p class="text-black-50 h4 m-0">
+                                                                        {{q[0]}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-4">
+                                                            <div class="card text-black shadow"
+                                                                 style="background-color: rgb(165,140,195)">
+                                                                <div class="card-body">
+                                                                    <p class="m-0 h5">Quarter 2</p>
+                                                                    <p class="text-black-50 h4 m-0">
+                                                                        {{q[1]}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 mb-4">
+                                                            <div class="card shadow"
+                                                                 style="background-color: rgb(201,185,214)">
+                                                                <div class="card-body">
+                                                                    <p class="m-0 h5">Quarter 3</p>
+                                                                    <p class="text-black-50 h4 m-0">
+                                                                        {{q[2]}}
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-lg-12 col-xl-12">
+
+
+                                    <div class="card shadow mb-4">
+                                        <div class=" card-header d-flex justify-content-between align-items-center">
+                                            <h3 class="font-weight-bold h3 m-0" style="color: rebeccapurple">
+                                                Total Amounts Approved Monthwise
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="table-responsive-lg">
+
+                                                    <div style="display: block">
+                                                        <div class="chart-wrapper">
+                                                            <canvas [chartType]="lineChartType"
+                                                                    [colors]="lineChartColors"
+                                                                    [datasets]="lineChartData"
+                                                                    [labels]="lineChartLabels"
+                                                                    [legend]="lineChartLegend"
+                                                                    [options]="lineChartOptions"
+                                                                    [plugins]="lineChartPlugins"
+                                                                    baseChart>
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="col-lg-12 col-xl-12">
+
+
+                                    <div class="card shadow mb-4">
+                                        <div class=" card-header d-flex justify-content-between align-items-center">
+                                            <h3 class="font-weight-bold h3 m-0" style="color: rebeccapurple">
+                                                All Requests
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="table-responsive-lg">
+
+                                                    <div style="display: block">
+                                                        <div class="chart-container">
+                                                            <canvas baseChart
+                                                                    [datasets]="bubbleChartData"
+                                                                    [options]="bubbleChartOptions"
+                                                                    [colors]="bubbleChartColors"
+                                                                    [legend]="bubbleChartLegend"
+                                                                    [chartType]="bubbleChartType">
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-lg-6 col-xl-6">
+                                    <div class="card shadow mb-4">
+                                        <div class=" card-header d-flex  justify-content-between align-items-center">
+                                            <h3 class="font-weight-bold h3 m-0" style="color: rebeccapurple">
+                                                Quarterwise Results for 2021
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="table-responsive-lg">
+
+                                                    <div style="display: block">
+                                                        <div class="chart-wrapper">
+                                                            <canvas baseChart
+                                                                    [data]="doughnutChartData"
+                                                                    [labels]="doughnutChartLabels"
+                                                                    [chartType]="doughnutChartType">
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-6 col-xl-6">
+                                    <div class="card shadow mb-4">
+                                        <div class=" card-header d-flex justify-content-between align-items-center">
+                                            <h3 class="font-weight-bold h3 m-0" style="color: rebeccapurple">
+                                                Applications Status for the Current Month
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="table-responsive-lg">
+
+                                                    <div style="display: block">
+                                                        <div class="chart-wrapper">
+                                                            <canvas baseChart
+                                                                    [data]="pieChartData"
+                                                                    [labels]="pieChartLabels"
+                                                                    [chartType]="pieChartType"
+                                                                    [options]="pieChartOptions"
+                                                                    [plugins]="pieChartPlugins"
+                                                                    [colors]="pieChartColors"
+                                                                    [legend]="pieChartLegend">
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+                                <footer class="bg-black sticky-footer">
+                                    <div class="container my-auto">
+                                        <div class="text-center my-auto copyright">
+                                            <span>Angular Team 2</span>
+                                        </div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
